@@ -10,28 +10,32 @@ makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   
   # set value of the matrix
+  # function no.1
   set <- function(y) {
     x <<- y
     m <<- NULL # resetting matrix to NULL
   }
   
   # get value of matrix
+  # function no.2
   get <- function() x
   
   # set inverse of matrix by setMatrix
+  # function no.3
   setMatrix <- function(cacheSolve) m <<- cacheSolve
   
   # get inverse of matrix by getMatrix
+  # function no.4
   getMatrix <- function() m
   
   # returning a list
   # containing all functions defined from above
   list(  
-        set = set,
-        get = get,
+        set = set,  # function no.1
+        get = get,  # function no.2
          
-        setMatrix = setMatrix,
-        getMatrix = getMatrix
+        setMatrix = setMatrix,  # function no.3
+        getMatrix = getMatrix   # function no.4
       )
 }
 
